@@ -289,7 +289,7 @@ body {
   display: block;
   content: " ";
   border-radius: 50%;
-  background-color: #393b4b;
+  background: radial-gradient(#cb68c3 35%, #6c72cd 108%);
   width: 0.82em;
   height: 0.82em;
   -moz-transition-property: all;
@@ -929,7 +929,7 @@ body {
 }
 .c100.blue .bar,
 .c100.blue .fill {
-  border-color: #C76BC5 !important;
+  border-color: #21222d !important;
 }
 .c100.blue:hover > span {
   color: #3c4761;

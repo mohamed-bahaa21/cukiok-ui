@@ -22,7 +22,8 @@
 .calendar__opts {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  padding: 20px var(--side-padding);
+  padding: 0 var(--side-padding);
+  padding-bottom: 1rem;
 }
 .calendar__body {
   background-image: linear-gradient(to bottom, var(--colorA), var(--colorA));
@@ -41,7 +42,8 @@
   color: #fff;
 }
 .calendar__dates {
-  padding: 10px var(--side-padding);
+  padding: 0 var(--side-padding);
+  padding-bottom: 1rem;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
@@ -69,18 +71,27 @@
   transition: background-color 0.3s ease;
 }
 .calendar__date:not(.calendar__date--selected):not(.calendar__date--grey):hover::before {
-  background-color: #ededed;
+  background: linear-gradient(-90deg, #cb68c3, #6c72cd) !important;
+  border-radius: 50%;
 }
 .calendar__date--grey {
   color: #fff;
   cursor: not-allowed;
 }
 .calendar__date--selected {
-  color: var(--colorA);
+  /* color: var(--colorA); */
+  color: #fff;
 }
 .calendar__date--selected::before {
-  background-color: #ffeaec;
+  /* background-color: #ffeaec; */
+  background-color: #21222d;
   border-radius: 0px;
+}
+.calendar__date--range-start {
+  box-shadow: 0 15px 20px -3px rgb(120 113 204 / 53%);
+  background: linear-gradient(-90deg, #cb68c3, #6c72cd) !important;
+  border-radius: 50%;
+  z-index: 1;
 }
 .calendar__date--first-date::before {
   border-top-left-radius: var(--accent-br);
@@ -107,18 +118,23 @@
 .calendar__date--range-end::before {
   box-shadow: 0 15px 20px -3px rgb(120 113 204 / 53%);
   background: linear-gradient(-90deg, #cb68c3, #6c72cd);
-  border-radius: var(--accent-br);
+  border-radius: 50%;
   z-index: 1;
 }
 .calendar__date--range-end::after {
   content: "";
   position: absolute;
   height: calc(var(--height) * 0.9);
-  background-color: #ffeaec;
-  width: 50px;
+  /* background-color: #ffeaec; */
+  background-color: #21222d;
+  width: 2rem;
   top: 50%;
-  right: 50%;
+  right: 0;
   transform: translateY(-50%);
+}
+
+.calendar__date--selected:nth-child(1) .calendar__date--range-end::after {
+  border-radius: 50%;
 }
 .calendar__date span {
   position: relative;
@@ -169,4 +185,6 @@ select {
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: right;
+  background-color: var(--colorA-light);
+  color: white;
 }
