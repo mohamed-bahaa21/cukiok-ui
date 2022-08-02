@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/circle-percent.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
+    <!-- <link rel="stylesheet" href="./css/charts.css"> -->
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="flex">
+        <section id="left-cont" style="width: 20%; padding: 2rem;">
+            <span
+                style="display: block; text-align: center; padding: 1rem 0; font-size: 1.5em; font-weight: 700; color: #fff;">LOGO</span>
+
+            <style>
+                #navy li {
+                    color: #fff;
+                    padding: 0.75rem 1rem;
+                    text-align: left;
+                    border-radius: 9px;
+                    font-size: 0.9em;
+                }
+            </style>
+            <ul style="list-style-type: none; padding: 0;" id="navy">
+                <li style="background: linear-gradient(-90deg, #cb68c3, #6C72CD); color: #fff;
+                padding: 0.75rem 1rem; text-align: center; border-radius: 9px;
+                box-shadow: -10px 4px 35px -12px #cb68c3, 12px 10px 35px -12px #6c72cd;
+                margin-bottom: 1rem;">Dashboard</li>
+                <li>Projects</li>
+                <li>Task</li>
+                <li>Team</li>
+                <li>Calendar</li>
+                <li>Settings</li>
+            </ul>
+
+            <div
+                style="background-color: var(--colorA-light); padding: 1rem 1rem 2rem 1rem; border-radius: 35px; font-size: 0.9em; color: #fff;">
+                <p style="margin-bottom: 1.2rem;">Upgrade to premium <br>
+                    to get all features
+                </p>
+                <a href="" style="background: linear-gradient(0deg, #cb68c3, #6C72CD); color: #fff;
+                padding: 0.45rem 0.65rem; border-radius: 9px; font-size: 0.9em;
+                text-decoration: none;">Get Started</a>
+                <img src="" alt="">
+            </div>
+
+            <a href="#"
+                style="color: #fff; text-decoration: none; font-size: 0.9em; opacity: 0.75; text-align: left; display: block; margin: 1rem 1rem;">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Log Out</a>
+        </section>
+
+        <section id="center-cont" style="width: 50%; margin: 1rem 0; padding: 2rem; border-radius: 35px;">
+            <div class="flex" style="justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <div>
+                    <h2 style="font-size: 1.75em; color: #fff; margin-bottom: 0rem;">Hello, Megkoi!</h2>
+                    <span>Let's Organize Your daily Tasks.</span>
+                </div>
+
+                <style>
+                    .icon-input {
+                        /* margin-bottom: 1rem; */
+                        position: relative;
+                        /* max-width: 300px; */
+                    }
+
+                    .icon-input__text-field {
+                        /* width: 100%; */
+                        padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+                        color: #fff;
+                        background: #21222d;
+                        margin: 1px;
+                        border: 0;
+                        border-radius: 15px;
+                    }
+
+                    .icon-input__icon {
+                        color: black;
+                        position: absolute;
+                        top: 50%;
+                        left: 1rem;
+                        transform: translateY(-50%);
+                        color: #fff;
+                        opacity: 0.5;
+                    }
+
+                    .icon-input__text-field:focus+.icon-input__icon {
+                        color: #fff;
+                        opacity: 1;
+                    }
+                </style>
+
+                <div class="flex" style="align-items: center;">
+                    <div class="icon-input" style="background: linear-gradient(-90deg, #cb68c3, #6C72CD);
+                    border-radius: 15px;">
+                        <input class="icon-input__text-field" type="text">
+                        <i class="icon-input__icon material-icons"><i class="fa-solid fa-magnifying-glass"></i></i>
+                    </div>
+                    <i class="fa-solid fa-bell"
+                        style="margin: 0 1rem; text-shadow: 0 0px 17px #cb68c3; color: #fff;"></i>
+                </div>
+            </div>
+
+            <style>
+                #apps .app {
+                    margin-right: 1rem;
+                }
+
+                #persons div {
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid #fff;
+                    background: linear-gradient(-90deg, #cb68c3, #6C72CD) !important;
+                    border-radius: 50%;
+                    position: relative;
+                    background-color: transparent;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            </style>
+
+            <div class="flex" style="overflow-x: auto; margin-bottom: 1rem;" id="apps">
+                <div class="app" style="background-color: #6C72CD; border-radius: 35px; padding: 1rem">
+                    <h3 style="padding: 0; margin: 0; margin-bottom: 0.5rem; font-size: 1em;">Travel Mobile App</h3>
+                    <div class="flex"
+                        style="justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <div class="flex" id="persons">
+                            <div style="background-color: #6C72CD;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -0.5rem; background-color: #6C72CD;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -1rem; background-color: #6C72CD;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -1.5rem; background-color: #6C72CD;">
+                                <span style="font-size: 0.85em; font-weight: 700;">+5</span>
+                            </div>
+                        </div>
+
+                        <div class="c100 p50 blue">
+                            <span>90%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span style="display: flex; align-items: center; font-size: 0.85em; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-exclamation"
+                                style="margin-right: 0.25rem; border: 1px solid #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;"></i>
+                            10 tasks</span>
+
+                        <span style="display: flex; align-items: center; font-size: 0.85em;"><i
+                                class="fa-solid fa-clock"
+                                style="margin-right: 0.25rem; font-size: 1.5em; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">
+                            </i>
+                            15 Aug 2021, 10:30:AM</span>
+                    </div>
+                </div>
+                <div class="app" style="background-color: #CB68C3; border-radius: 35px; padding: 1rem">
+                    <h3 style="padding: 0; margin: 0; margin-bottom: 0.5rem; font-size: 1em;">Travel Mobile App</h3>
+                    <div class="flex"
+                        style="justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <div class="flex" id="persons">
+                            <div style="background-color: #CB68C3;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -0.5rem; background-color: #CB68C3;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -1rem; background-color: #CB68C3;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -1.5rem; background-color: #CB68C3;">
+                                <span style="font-size: 0.85em; font-weight: 700;">+5</span>
+                            </div>
+                        </div>
+
+                        <div class="c100 p75 blue">
+                            <span>75%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span style="display: flex; align-items: center; font-size: 0.85em; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-exclamation"
+                                style="margin-right: 0.25rem; border: 1px solid #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;"></i>
+                            10 tasks</span>
+
+                        <span style="display: flex; align-items: center; font-size: 0.85em;"><i
+                                class="fa-solid fa-clock"
+                                style="margin-right: 0.25rem; font-size: 1.5em; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">
+                            </i>
+                            15 Aug 2021, 10:30:AM</span>
+                    </div>
+                </div>
+                <div class="app" style="background-color: #FFAC4D; border-radius: 35px; padding: 1rem">
+                    <h3 style="padding: 0; margin: 0; margin-bottom: 0.5rem; font-size: 1em;">Travel Mobile App</h3>
+                    <div class="flex"
+                        style="justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <div class="flex" id="persons">
+                            <div style="background-color: #FFAC4D;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -0.5rem; background-color: #FFAC4D;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -1rem; background-color: #FFAC4D;">
+                                <img src="#" alt="">
+                            </div>
+                            <div style="left: -1.5rem; background-color: #FFAC4D;">
+                                <span style="font-size: 0.85em; font-weight: 700;">+5</span>
+                            </div>
+                        </div>
+
+                        <div class="c100 p50 blue">
+                            <span>90%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span style="display: flex; align-items: center; font-size: 0.85em; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-exclamation"
+                                style="margin-right: 0.25rem; border: 1px solid #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;"></i>
+                            10 tasks</span>
+
+                        <span style="display: flex; align-items: center; font-size: 0.85em;"><i
+                                class="fa-solid fa-clock"
+                                style="margin-right: 0.25rem; font-size: 1.5em; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">
+                            </i>
+                            15 Aug 2021, 10:30:AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="parent">
+                    <div class="div3" style="background-color: var(--colorA); border-radius: 35px; padding: 1rem;">
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <h4>Today Task</h4>
+                            <div style="background: linear-gradient(-90deg, #cb68c3, #6C72CD);
+                                border-radius: 15px; padding: 2px 1.5px 4px 2px;">
+                                <a href="#"
+                                    style="background-color: var(--colorA); border-radius: 15px; padding: 0.25rem 0.5rem; color: #fff; font-size: 0.8em; opacity: 0.8;">See
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <div style="padding: 1rem; overflow-y: auto;">
+                            <div class="flex" style="justify-content: space-between; align-items: center; padding: 1rem; border-radius: 15px;
+                            box-shadow: -10px 8px 12px -17px #cb68c3, 12px 14px 11px -22px #6c72cd;">
+                                <div>
+                                    <span style="display: block; font-weight: 0.9em;">Create detail booking</span>
+                                    <span style="opacity: 0.75; font-weight: 0.5em;">2 min ago</span>
+                                </div>
+                                <form action="">
+                                    <div
+                                        style="background: linear-gradient(-45deg, #cb68c3, #6C72CD); border-radius: 5px;">
+                                        <input type="checkbox" name="checkbox"
+                                            style="width: 1.25rem; height: 1.25rem;
+                                            margin: 3px 1px 1px 2px; padding: 0; border: 0; background-color: var(--colorA);" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex" style="justify-content: space-between; align-items: center; padding: 1rem; border-radius: 15px;
+                            box-shadow: -10px 8px 12px -17px #cb68c3, 12px 14px 11px -22px #6c72cd;">
+                                <div>
+                                    <span style="display: block; font-weight: 0.9em;">Create detail booking</span>
+                                    <span style="opacity: 0.75; font-weight: 0.5em;">2 min ago</span>
+                                </div>
+                                <form action="">
+                                    <div
+                                        style="background: linear-gradient(-45deg, #cb68c3, #6C72CD); border-radius: 5px;">
+                                        <input type="checkbox" name="checkbox"
+                                            style="width: 1.25rem; height: 1.25rem;
+                                            margin: 3px 1px 1px 2px; padding: 0; border: 0; background-color: var(--colorA);" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex" style="justify-content: space-between; align-items: center; padding: 1rem; border-radius: 15px;
+                            box-shadow: -10px 8px 12px -17px #cb68c3, 12px 14px 11px -22px #6c72cd;">
+                                <div>
+                                    <span style="display: block; font-weight: 0.9em;">Create detail booking</span>
+                                    <span style="opacity: 0.75; font-weight: 0.5em;">2 min ago</span>
+                                </div>
+                                <form action="">
+                                    <div
+                                        style="background: linear-gradient(-45deg, #cb68c3, #6C72CD); border-radius: 5px;">
+                                        <input type="checkbox" name="checkbox"
+                                            style="width: 1.25rem; height: 1.25rem;
+                                            margin: 3px 1px 1px 2px; padding: 0; border: 0; background-color: var(--colorA);" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex" style="justify-content: space-between; align-items: center; padding: 1rem; border-radius: 15px;
+                            box-shadow: -10px 8px 12px -17px #cb68c3, 12px 14px 11px -22px #6c72cd;">
+                                <div>
+                                    <span style="display: block; font-weight: 0.9em;">Create detail booking</span>
+                                    <span style="opacity: 0.75; font-weight: 0.5em;">2 min ago</span>
+                                </div>
+                                <form action="">
+                                    <div
+                                        style="background: linear-gradient(-45deg, #cb68c3, #6C72CD); border-radius: 5px;">
+                                        <input type="checkbox" name="checkbox"
+                                            style="width: 1.25rem; height: 1.25rem;
+                                            margin: 3px 1px 1px 2px; padding: 0; border: 0; background-color: var(--colorA);" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex" style="justify-content: space-between; align-items: center; padding: 1rem; border-radius: 15px;
+                            box-shadow: -10px 8px 12px -17px #cb68c3, 12px 14px 11px -22px #6c72cd;">
+                                <div>
+                                    <span style="display: block; font-weight: 0.9em;">Create detail booking</span>
+                                    <span style="opacity: 0.75; font-weight: 0.5em;">2 min ago</span>
+                                </div>
+                                <form action="">
+                                    <div
+                                        style="background: linear-gradient(-45deg, #cb68c3, #6C72CD); border-radius: 5px;">
+                                        <input type="checkbox" name="checkbox"
+                                            style="width: 1.25rem; height: 1.25rem;
+                                            margin: 3px 1px 1px 2px; padding: 0; border: 0; background-color: var(--colorA);" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div1" style="background-color: var(--colorA); border-radius: 35px; padding: 1rem;">
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <h4>Members</h4>
+                            <div style="background: linear-gradient(-90deg, #cb68c3, #6C72CD);
+                                border-radius: 15px; padding: 2px 1.5px 4px 2px;">
+                                <a href="#"
+                                    style="background-color: var(--colorA); border-radius: 15px; padding: 0.25rem 0.5rem; color: #fff; font-size: 0.8em; opacity: 0.8;">See
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <div class="flex" style="justify-content: center; margin-bottom: 1rem;">
+                            <div
+                                style="width: 2rem; height: 2rem; background-color: #6C72CD; border-radius: 50%; margin-right: 1rem;">
+                                <img src="#" alt="">
+                            </div>
+
+                            <div style="margin-right: 1rem;">
+                                <span style="display: block; font-size: 0.9em; color: #fff;">Kim Mengkoi</span>
+                                <span style="display: block; font-size: 0.8em; opacity: 0.75;">Ui Designer</span>
+                            </div>
+
+                            <div style="border-left: 1px solid rgba(255, 255, 255, 0.35); padding-left: 0.75rem;">
+                                <span style="display: block; font-size: 0.8em; color: #fff; opacity: 0.75;">Work
+                                    On</span>
+                                <span style="display: block; font-size: 0.9em; color: #fff;">Travel Mobile App</span>
+                            </div>
+                        </div>
+                        <div class="flex" style="justify-content: center; margin-bottom: 1rem;">
+                            <div
+                                style="width: 2rem; height: 2rem; background-color: #6C72CD; border-radius: 50%; margin-right: 1rem;">
+                                <img src="#" alt="">
+                            </div>
+
+                            <div style="margin-right: 1rem;">
+                                <span style="display: block; font-size: 0.9em; color: #fff;">Kim Mengkoi</span>
+                                <span style="display: block; font-size: 0.8em; opacity: 0.75;">Ui Designer</span>
+                            </div>
+
+                            <div style="border-left: 1px solid rgba(255, 255, 255, 0.35); padding-left: 0.75rem;">
+                                <span style="display: block; font-size: 0.8em; color: #fff; opacity: 0.75;">Work
+                                    On</span>
+                                <span style="display: block; font-size: 0.9em; color: #fff;">Travel Mobile App</span>
+                            </div>
+                        </div>
+                        <div class="flex" style="justify-content: center; margin-bottom: 1rem;">
+                            <div
+                                style="width: 2rem; height: 2rem; background-color: #6C72CD; border-radius: 50%; margin-right: 1rem;">
+                                <img src="#" alt="">
+                            </div>
+
+                            <div style="margin-right: 1rem;">
+                                <span style="display: block; font-size: 0.9em; color: #fff;">Kim Mengkoi</span>
+                                <span style="display: block; font-size: 0.8em; opacity: 0.75;">Ui Designer</span>
+                            </div>
+
+                            <div style="border-left: 1px solid rgba(255, 255, 255, 0.35); padding-left: 0.75rem;">
+                                <span style="display: block; font-size: 0.8em; color: #fff; opacity: 0.75;">Work
+                                    On</span>
+                                <span style="display: block; font-size: 0.9em; color: #fff;">Travel Mobile App</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div2" style="background-color: var(--colorA); border-radius: 35px; padding: 1rem; height: fit-content;
+                    padding-bottom: 2rem;">
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <h4>Task Activity</h4>
+                            <div style="background: linear-gradient(-90deg, #cb68c3, #6C72CD);
+                                border-radius: 15px; padding: 2px 1.5px 4px 2px;">
+                                <a href="#"
+                                    style="background-color: var(--colorA); border-radius: 15px; padding: 0.25rem 0.5rem; color: #fff; font-size: 0.8em; opacity: 0.8;">See
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <div class="flex" style="justify-content: center; align-items: center;">
+                            <div style="transform: scale(2); margin-right: 1rem;">
+                                <div class="c100 p83 blue">
+                                    <span>83%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <style>
+                                #membeers {
+                                    list-style-type: none;
+                                    font-size: 0.9em;
+                                }
+
+                                #membeers li:nth-child(1):before {
+                                    color: #6C72CD;
+                                }
+
+                                #membeers li:nth-child(2):before {
+                                    color: #CB68C3;
+                                }
+
+                                #membeers li:nth-child(3):before {
+                                    color: #FFAC4D;
+                                }
+
+                                #membeers li::before {
+                                    content: "\2022";
+                                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                                    font-weight: bold;
+                                    /* If you want it to be bold */
+                                    display: inline-block;
+                                    /* Needed to add space between the bullet and the text */
+                                    width: 1em;
+                                    /* Also needed for space (tweak if needed) */
+                                    margin-left: -1em;
+                                    /* Also needed for space (tweak if needed) */
+
+                                }
+                            </style>
+                            <div>
+                                <ul id="membeers">
+                                    <li>UI Designer</li>
+                                    <li>UX Researcher</li>
+                                    <li>Product Designer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="right-cont" style="width: fit-content; padding: 2rem;">
+            <div class="flex" style="justify-content: flex-start; align-items: center;">
+                <div
+                    style="width: 2rem; height: 2rem; background-color: #6C72CD; border-radius: 50%; margin-right: 1rem;">
+                    <img src="" alt="">
+                </div>
+
+                <div style="margin-right: 1rem;">
+                    <span style="display: block; font-size: 0.9em; color: #fff;">Mengkoi Sudagar</span>
+                    <span style="display: block; font-size: 0.8em;">UI Designer</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+
+            <div class="" style="margin: 2rem 0; width: fit-content;">
+                <div class="calendar__opts">
+                    <select name="calendar__month" id="calendar__month">
+                        <option>Jan</option>
+                        <option>Feb</option>
+                        <option>Mar</option>
+                        <option>Apr</option>
+                        <option selected>May</option>
+                        <option>Jun</option>
+                        <option>Jul</option>
+                        <option>Aug</option>
+                        <option>Sep</option>
+                        <option>Oct</option>
+                        <option>Nov</option>
+                        <option>Dec</option>
+                    </select>
+
+                    <select name="calendar__year" id="calendar__year">
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option selected>2020</option>
+                    </select>
+                </div>
+
+                <div class="calendar__body">
+                    <div class="calendar__days">
+                        <div>M</div>
+                        <div>T</div>
+                        <div>W</div>
+                        <div>T</div>
+                        <div>F</div>
+                        <div>S</div>
+                        <div>S</div>
+                    </div>
+
+                    <div class="calendar__dates">
+                        <div class="calendar__date calendar__date--grey"><span>27</span></div>
+                        <div class="calendar__date calendar__date--grey"><span>28</span></div>
+                        <div class="calendar__date calendar__date--grey"><span>29</span></div>
+                        <div class="calendar__date calendar__date--grey"><span>30</span></div>
+                        <div class="calendar__date"><span>1</span></div>
+                        <div class="calendar__date"><span>2</span></div>
+                        <div class="calendar__date"><span>3</span></div>
+                        <div class="calendar__date"><span>4</span></div>
+                        <div class="calendar__date"><span>5</span></div>
+                        <div class="calendar__date"><span>6</span></div>
+                        <div class="calendar__date"><span>7</span></div>
+                        <div class="calendar__date"><span>8</span></div>
+                        <div class="calendar__date"><span>9</span></div>
+                        <div class="calendar__date"><span>10</span></div>
+                        <div class="calendar__date"><span>11</span></div>
+                        <div class="calendar__date"><span>12</span></div>
+                        <div class="calendar__date"><span>13</span></div>
+                        <div class="calendar__date"><span>14</span></div>
+                        <div class="calendar__date"><span>15</span></div>
+                        <div
+                            class="calendar__date calendar__date--selected calendar__date--first-date calendar__date--range-start">
+                            <span>16</span>
+                        </div>
+                        <div class="calendar__date calendar__date--selected calendar__date--last-date">
+                            <span>17</span>
+                        </div>
+                        <div class="calendar__date calendar__date--selected calendar__date--first-date">
+                            <span>18</span>
+                        </div>
+                        <div class="calendar__date calendar__date--selected"><span>19</span></div>
+                        <div class="calendar__date calendar__date--selected"><span>20</span></div>
+                        <div
+                            class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end">
+                            <span>21</span>
+                        </div>
+                        <div class="calendar__date"><span>22</span></div>
+                        <div class="calendar__date"><span>23</span></div>
+                        <div class="calendar__date"><span>24</span></div>
+                        <div class="calendar__date"><span>25</span></div>
+                        <div class="calendar__date"><span>26</span></div>
+                        <div class="calendar__date"><span>27</span></div>
+                        <div class="calendar__date"><span>28</span></div>
+                        <div class="calendar__date"><span>29</span></div>
+                        <div class="calendar__date"><span>30</span></div>
+                        <div class="calendar__date"><span>31</span></div>
+                    </div>
+                </div>
+
+                <div class="calendar__buttons">
+                    <button class="calendar__button calendar__button--grey">Back</button>
+
+                    <button class="calendar__button calendar__button--primary">Apply</button>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <div class="flex" style="justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-weight: 700; font-size: 1em; color: #fff;">03 Aug</span>
+                    <span>...</span>
+                </div>
+
+                <div class="flex" style="align-items: center; margin-bottom: 0.5rem;">
+                    <span style="margin-right: 1rem; font-size: 1em;">10:00</span>
+                    <span style="margin-right: 1rem; color:#FFAC4D; border-right: 1px solid; height: 2em;"></span>
+                    <div>
+                        <span style="display: block; font-size: 0.8em;">Design</span>
+                        <span style="font-size: 0.9em; color: #fff;">Task Management</span>
+                    </div>
+                </div>
+                <div class="flex" style="align-items: center;">
+                    <span style="margin-right: 1rem; font-size: 1em;">12:00</span>
+                    <span style="margin-right: 1rem; color:#6c72cd; border-right: 1px solid; height: 2em;"></span>
+                    <div>
+                        <span style="display: block; font-size: 0.8em;">Design</span>
+                        <span style="font-size: 0.9em; color: #fff;">Task Management</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex" style="justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-weight: 700; font-size: 1em; color: #fff;">04 Aug</span>
+                    <span>...</span>
+                </div>
+
+                <div class="flex" style="align-items: center; margin-bottom: 0.5rem;">
+                    <span style="margin-right: 1rem; font-size: 1em;">10:00</span>
+                    <span style="margin-right: 1rem; color:#FFAC4D; border-right: 1px solid; height: 2em;"></span>
+                    <div>
+                        <span style="display: block; font-size: 0.8em;">Design</span>
+                        <span style="font-size: 0.9em; color: #fff;">Task Management</span>
+                    </div>
+                </div>
+                <div class="flex" style="align-items: center;">
+                    <span style="margin-right: 1rem; font-size: 1em;">12:00</span>
+                    <span style="margin-right: 1rem; color:#6c72cd; border-right: 1px solid; height: 2em;"></span>
+                    <div>
+                        <span style="display: block; font-size: 0.8em;">Design</span>
+                        <span style="font-size: 0.9em; color: #fff;">Task Management</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
